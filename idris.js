@@ -24,7 +24,7 @@ function getStudentScores() {
                     const grade = calculateGrade(score);
                     console.log(`Student ${count + 1}: Score = ${score}, Grade = ${grade}`);
                     count++;
-                    askForScore(); // Continue asking for the next score
+                    askForScore(); // keep asking for the next score
                     
                 });
             }
@@ -46,6 +46,7 @@ function calculateGrade(score) {
     if (score >= 80) return 'B';
     if (score >= 70) return 'C';
     if (score >= 60) return 'D';
+    if (score >= 50) return 'E';
     return 'F';
 }
 // Call the function to start the process
